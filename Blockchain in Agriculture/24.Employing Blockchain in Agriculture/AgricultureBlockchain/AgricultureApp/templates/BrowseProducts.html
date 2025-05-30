@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Blockchain Agriculture</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="screen" />
+ 
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><span><center>Employing Blockchain in Agriculture 
+
+</center></span></h1>
+		
+	</div>
+	<div id="menu">
+		<ul><center>
+      <li><a href="{% url 'BrowseProducts' %}">Browse Products</a></li>
+	  <li><a href="{% url 'index' %}">Logout</a></li>		
+		</center></ul>
+		
+	</div>
+	
+</div>
+
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		 <form name ="frm" method="post" action="SearchProductAction" onsubmit="return validate(this);">
+		<!-- start content -->
+		<div id="content">
+		<div class="flower"><center><img src="{% static 'images/tra.jpg' %}" alt="" width="660" height="100" /></center></div>
+			<br/><br/>
+			<div class="flower"><center><h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			View Products Screen<h1></div>
+			<br/>
+			
+			
+	{% csrf_token %}
+		
+					
+			<font size="" color="black"><center>{{ data|safe }}</center></font>
+						
+						<table align="center" width="80" >
+			 
+		
+		{{ data1|safe }}
+
+		
+		         
+			<tr><td></td><td><input type="submit" value="Search">
+			</td>
+			
+			
+				</table>
+			</center><br /><div class="post">
+				
+				<div class="entry">
+					
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+</body>
+</html>
+
+

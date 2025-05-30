@@ -1,0 +1,130 @@
+{% load static %}
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Blockchain Agriculture</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="screen" />
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["t1"].value;
+	var y=document.forms["f1"]["t2"].value;
+	var c=document.forms["f1"]["t3"].value;
+	var e=document.forms["f1"]["t4"].value;
+	var a=document.forms["f1"]["t5"].value;
+	
+	if(x == null || x==""){
+		window.alert("Crop name must be enter");
+		document.f1.t1.focus();
+		return false;
+	}
+	if(y == null || y==""){
+		window.alert("Quantity must be enter");
+		document.f1.t2.focus();
+		return false;
+	}
+	if(isNaN(y)){
+		window.alert("Please enter valid quantity number");
+		document.f1.t2.focus();
+		return false;
+	}
+	if(c == null || c==""){
+		window.alert("Price must be enter");
+		document.f1.t3.focus();
+		return false;
+	}
+	
+	if(e == null || e==""){
+		window.alert("Product description must be enter");
+		document.f1.t4.focus();
+		return false;
+	}
+	if(image == null || image==""){
+		window.alert("Product image must be upload");
+		document.f1.t5.focus();
+		return false;
+	}
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><span><center>Employing Blockchain in Agriculture 
+
+</center></span></h1>
+		
+	</div>
+	<div id="menu">
+		<ul id="main">
+			<li><a href="{% url 'UploadCrop' %}"><font size="2" color="white">Upload Crop Details</a></li><td></td>
+			<li><a href="{% url 'FertilizerInfo' %}"><font size="2" color="white">Fertilizers/Pesticide Info</a></li><td></td>
+			<li><a href="{% url 'ViewOrdersForFarmer' %}"><font size="2" color="white">View Orders</a></li><td></td>
+			<li><a href="{% url 'index' %}"><font size="2" color="white">Logout</a></li><td></td>
+			<td></td>
+			
+     
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		 <form name ="frm" method="post" action="UploadCropAction" enctype="multipart/form-data" onsubmit="return validate(this);">
+		<!-- start content -->
+		<div id="content">
+		<div class="flower"><center><img src="{% static 'images/tra.jpg' %}" alt="" width="660" height="100" /></center></div>
+			<br/><br/>
+			<div class="flower"><center><h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			New User Signup Screen<h1></div>
+			<br/>
+			
+			
+	{% csrf_token %}
+		
+			<center><font size="3" color="red">{{ data|safe }}</font></center>
+		
+			<table align="center" width="80" >
+			 <tr><td><font size="" color="black">Crop&nbsp;Name</font></td><td><input type="text" name="t1" style="font-family: Comic Sans MS" size="30"/></td></tr>
+         
+		  
+		<tr><td><font size="" color="black">Quantity</font></td><td><input type="text" name="t2" style="font-family: Comic Sans MS" size="20"/></td></tr>
+
+		<tr><td><font size="" color="black">Crop&nbsp;Price</font></td><td><input type="text" name="t3" style="font-family: Comic Sans MS" size="20"/></td></tr>
+
+		<tr><td><font size="" color="black">Crop&nbsp;Description</font></td><td><input type="text" name="t4" style="font-family: Comic Sans MS" size="80"/></td></tr>
+
+		<tr><td><font size="" color="black">Crop&nbsp;Image</font></td><td><input type="file" name="t5" style="font-family: Comic Sans MS" size="60"/></td></tr>
+		
+		         
+			<tr><td></td><td><input type="submit" value="Upload Crop Details"></td></tr></table>
+</form>
+			</table>
+			</center><br /><div class="post">
+				
+				<div class="entry">
+					
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+</body>
+</html>
+
+

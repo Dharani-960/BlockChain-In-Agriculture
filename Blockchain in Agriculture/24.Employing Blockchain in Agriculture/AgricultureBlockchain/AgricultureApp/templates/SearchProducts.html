@@ -1,0 +1,86 @@
+{% load static %}
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Blockchain Agriculture</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="screen" />
+  <script LANGUAGE="Javascript" >
+function validate(){
+	var y=document.forms["f1"]["t2"].value;
+	if(y == null || y==""){
+		window.alert("Quantity must be enter");
+		document.f1.t2.focus();
+		return false;
+	}
+	if(isNaN(c)){
+		window.alert("Please enter valid quantity number");
+		document.f1.t4.focus();
+		return false;
+	}
+	
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><span><center>Employing Blockchain in Agriculture 
+
+</center></span></h1>
+		
+	</div>
+	<div id="menu">
+		<ul><center>
+      <li><a href="{% url 'BrowseProducts' %}">Browse Products</a></li>
+	  <li><a href="{% url 'index' %}">Logout</a></li>		
+		</center></ul>
+		
+	</div>
+	
+</div>
+
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		<!-- start content -->
+		<div id="content">
+		<div class="flower"><center><img src="{% static 'images/tra.jpg' %}" alt="" width="660" height="100" /></center></div>
+			<br/><br/>
+			<div class="flower"><center><h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Purchase Crop Screen<h1></div>
+			<br/>
+			
+					
+						
+						<table align="center" width="80" >
+			 
+		
+		{{ data|safe }}
+
+		
+		    </table>
+			</center><br /><div class="post">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<div class="entry">
+					
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+</body>
+</html>
+

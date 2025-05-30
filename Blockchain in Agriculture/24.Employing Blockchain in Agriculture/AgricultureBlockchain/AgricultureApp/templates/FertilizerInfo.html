@@ -1,0 +1,126 @@
+{% load static %}
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Blockchain Agriculture</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" media="screen" />
+ </head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><span><center>Employing Blockchain in Agriculture 
+
+</center></span></h1>
+		
+	</div>
+	<div id="menu">
+		<ul id="main">
+			<li><a href="{% url 'UploadCrop' %}"><font size="2" color="white">Upload Crop Details</a></li><td></td>
+			<li><a href="{% url 'FertilizerInfo' %}"><font size="2" color="white">Fertilizers/Pesticide Info</a></li><td></td>
+			<li><a href="{% url 'ViewOrdersForFarmer' %}"><font size="2" color="white">View Orders</a></li><td></td>
+			<li><a href="{% url 'index' %}"><font size="2" color="white">Logout</a></li><td></td>
+			<td></td>
+			
+     
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		<!-- start content -->
+		<div id="content">
+		<div class="flower"><center><img src="{% static 'images/tra.jpg' %}" alt="" width="660" height="100" /></center></div>
+			<br/><br/>
+			<div class="flower"><center><h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Pesticide/Fertilizer Info Screen<h1></div>
+			<br/>
+			
+			
+	
+		
+			<center><font size="3" color="red">{{ data|safe }}</font></center>
+		
+			 
+			 <p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			 Apple___Cedar_apple_rust: rust can be controlled by spraying plants with a copper solution (0.5 to 2.0 oz/ gallon of water) at least four times between late August and late October.
+			 </p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Apple___Black_rot: Spray with "captan or sulfur" while disease in early stages.
+			</p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Apple___Apple_scab: For best control, spray liquid copper soap early, two weeks before symptoms normally appear. Alternatively, begin applications when disease first appears, and repeat at 7 to10 day intervals up to blossom drop.
+
+			</p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Corn_(maize)___Northern_Leaf_Blight: Monogenic and polygenic resistance can act together to reduce the severity of NCLB. Crop rotation and tillage practices may be helpful in some cases.
+
+			</p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Corn_(maize)___Common_rust_: Spray "mancozeb 2.5 g/I" as soon as pustules appear.
+
+			</p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot: Combination of "azoxystrobin and propiconazole, prothioconazole and trifloxystrobin".
+
+			</p>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Tomato___Bacterial_spot: Use "copper fungicides, or copper plus mancozeb". And growing healthy plants from seed free from infection.<br/>
+			Tomato___Early_blight: Combination of copper sulfate and lime. <br/><br/>
+Tomato___Late_blight: Use a copper-based fungicide (mix 2 ounces of fungicide with a gallon of water) every 6 or 7 days following a watering.<br/>
+Tomato___Leaf_Mold: Use chlorothalonil, menab, mancozeb and copper formulations.<br/><br/>
+Tomato___Septoria_leaf_spot: "copper and potassium bicarbonate" will help contain the fungal disease and keep it from spreading. <br/>
+<br/>Tomato___Spider_mites Two-spotted_spider_mite: # spiromesifen (Oberon 2SC): Group 23, mainly affects immature stages # insecticidal soap (M-Pede) # neem oil (Trilogy)<br/><br/>
+Tomato___Target_Spot: use chlorothalonil, copper oxychloride or mancozeb.<br/><br/>
+Tomato___Tomato_mosaic_virus: Soak seeds in a 10% solution of trisodium phosphate (Na3PO4) for at least 15 minutes.<br/><br/>
+Tomato___Tomato_Yellow_Leaf_Curl_Virus: Insecticides of the family of the pyrethroids used as soil drenches or spray during the seeding stage can reduce the population of whiteflies.<br/><br/>
+
+			</p><br/>
+
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Potato___Early_blight: Trichoderma harzianum and Pseudomonas fluorescens are effective against the disease
+Potato___Late_blight: spray of "mancozeb at 0.25%" followed by cymoxanil + mancozeb
+			</p>
+<br/>
+			<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+			Grape___Black_rot: Buscalid 25.2%WG and Pyraclostrobin 12.8%WG (or) fosetyl 80.0%WG<br/>
+Grape___Esca_(Black_Measles): Chlorantranilprole +lambda cyhalortrin(0.5ml/I) or cypermethrin(1ml/l)<br/>
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot): Ferrous sulphate Fe19%<br/>
+
+			</p>
+
+			
+		
+			</table>
+			</center><br /><div class="post">
+				
+				<div class="entry">
+					
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+</body>
+</html>
+
+
